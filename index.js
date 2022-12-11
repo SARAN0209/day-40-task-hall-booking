@@ -1,12 +1,12 @@
 const express = require ('express');
 const router=require ('./router/router')
 const mongo =require('./connect')
-const dotenv=require('dotenv')
+require("dotenv").config()
 const port=process.env.PORT || 5000
 
 const app=express();
 
-dotenv.config();
+console.log(process.env.PORT)
 mongo.connect();
 app.use(express.json());
 
